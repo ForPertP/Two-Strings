@@ -1,7 +1,7 @@
 string twoStrings(string s1, string s2)
 {
     string result{ "NO" };
-    unordered_map<char, int> um_words;
+    std::unordered_map<char, int> um_words;
 
     for (auto& it : s1)
     {
