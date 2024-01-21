@@ -14,6 +14,26 @@ string rtrim(const string &);
  *  2. STRING s2
  */
 
+string twoStrings(string s1, string s2)
+{
+    std::unordered_set<char> charSet;
+
+    for (const char& ch : s1)
+    {
+        charSet.insert(ch);
+    }
+
+    for (const char& ch : s2)
+    {
+        if (charSet.find(ch) != charSet.end())
+        {
+            return "YES";
+        }
+    }
+
+    return "NO";
+}
+
 string twoStrings2(string s1, string s2)
 {
     std::unordered_map<char, int> charCountMap;
