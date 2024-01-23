@@ -24,6 +24,26 @@ class Result
      *  2. STRING s2
      */
 
+    public static string twoStrings(string s1, string s2)
+    {
+        HashSet<char> charSet = new HashSet<char>();
+
+        foreach (char ch in s1)
+        {
+            charSet.Add(ch);
+        }
+
+        foreach (char ch in s2)
+        {
+            if (charSet.Contains(ch))
+            {
+                return "YES";
+            }
+        }
+
+        return "NO";
+    }
+
     public static string twoStrings2(string s1, string s2)
     {
         Dictionary<char, int> charCountMap = new Dictionary<char, int>();
