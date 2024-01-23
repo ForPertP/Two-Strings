@@ -45,7 +45,7 @@ string twoStrings2(string s1, string s2)
 
     for (const auto& ch : s2)
     {
-        if (charCountMap[ch] > 0)
+        if (charCountMap.find(ch) != charCountMap.end()) 
         {
             return "YES";
         }
