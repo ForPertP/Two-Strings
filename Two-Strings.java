@@ -37,7 +37,21 @@ class Result {
         return "NO";
     }
 
+    public static String twoStrings2(String s1, String s2) {
+        Map<Character, Integer> charCountMap = new HashMap<>();
 
+        for (char ch : s1.toCharArray()) {
+            charCountMap.put(ch, charCountMap.getOrDefault(ch, 0) + 1);
+        }
+
+        for (char ch : s2.toCharArray()) {
+            if (charCountMap.containsKey(ch)) {
+                return "YES";
+            }
+        }
+
+        return "NO";
+    }
 }
 
 public class Solution {
